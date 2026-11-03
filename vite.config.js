@@ -5,9 +5,6 @@ import Handlebars from "vite-plugin-handlebars";
 import { purgeCSSPlugin } from "@fullhuman/postcss-purgecss";
 
 const __dirname = import.meta.dirname;
-
-// En GitHub Actions se define DEPLOY_BASE_URL (ej. "/Perfil-de-Portafolio/").
-// Si no existe, se usan rutas relativas, que funcionan en cualquier ubicación.
 const base_path = process.env.DEPLOY_BASE_URL || "./";
 
 function obtenerHtmlFiles() {
@@ -29,18 +26,14 @@ export default defineConfig({
     css: {
         postcss: {
             plugins: [
-                // Purga: conserva únicamente las reglas CSS que se usan
-                // en el HTML, las plantillas .hbs y el JavaScript.
                 purgeCSSPlugin({
                     content: [...Object.values(obtenerHtmlFiles()), "./src/**/*.hbs", "./src/**/*.js"],
-                    // .indicador se crea dinámicamente desde main.js
                     safelist: ["indicador"],
                 }),
             ],
         },
     },
     build: {
-        // Minificación de JS y CSS (activa por defecto en `vite build`)
         minify: true,
         cssMinify: true,
         rolldownOptions: {
