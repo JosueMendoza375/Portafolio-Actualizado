@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    font-family: @fuente-base;
+    line-height: 1.6;
+    color: @texto;
+    background: @fondo;
+}
+
+main {
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+
+    @media (max-width: @media_breakpoints[mobile]) {
+        padding: 0 1rem;
+    }
+}
+
+img {
+    float: right;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0.25rem 0 0.75rem 1.25rem;
+    border-radius: 8px;
+
+    @media (max-width: @media_breakpoints[mobile]) {
+        float: none;
+        margin: 0 auto 1rem;
+    }
+}

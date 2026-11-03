@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/less/style.less">
+    <script type="module" src="./src/main.js"></script>
+    <title>Josué Mendoza</title>
+</head>
+
+<body>
+    {{>Header titulo="Josué Javier Mendoza Laínez"}}
+
+    <main>
+        <section id="biografia">
+            <h2>Biografía</h2>
+            <p>Hola, mi nombre es Josué Javier Mendoza Laínez, tengo 20 años. Actualmente estoy estudiando la carrera de
+                Ingeniería en Ciencias de la Computación en el Universidad Católica de Honduras Campus Sagrado Corazón de Jesús. Me apasiona la
+                tecnología y la programación, y siempre estoy buscando aprender cosas nuevas en este campo.</p>
+            <img src="./src/assets/img/SelfieNueva.jpg" alt="Foto de Josué Mendoza" width="200">
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <ul>
+                <li>Desarrollo de una aplicación web para gestión de tareas.</li>
+                <li>Creación de un sistema de control de inventarios para pequeñas empresas.</li>
+                <li>Participación en hackathons y competencias de programación.</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través del siguiente correo electrónico:</p>
+            <ul>
+                <li>josuemend:V@gmail.com</li>
+                <li>Teléfono: +504 7774-5775</li>
+                <li>GitHub: JosueMen1231</li>
+            </ul>
+        </section>
+    </main>
+
+    {{>Footer anio="2026" autor="Josué Javier Mendoza Laínez"}}
+</body>
+
+</html>

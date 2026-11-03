@@ -1,0 +1,79 @@
+section {
+    display: flow-root;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1.75rem;
+    background: @superficie;
+    border: 1px solid @borde;
+    border-radius: 8px;
+
+    @media (max-width: @media_breakpoints[mobile]) {
+        padding: 1.25rem;
+    }
+
+    &[hidden] {
+        display: none !important;
+    }
+
+    h2 {
+        margin: 0 0 0.75rem;
+        padding-left: 0.75rem;
+        font-size: 1.4rem;
+        color: @primario;
+        border-left: 4px solid @acento;
+    }
+
+    p {
+        margin: 0 0 0.75rem;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    li {
+        margin-bottom: 0.4rem;
+
+        &::marker {
+            color: @acento;
+        }
+    }
+}
+
+#biografia {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    column-gap: 1.5rem;
+    align-items: start;
+
+    h2 {
+        grid-column: 1 / -1;
+    }
+
+    p {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    img {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    @media (max-width: @media_breakpoints[mobile]) {
+        grid-template-columns: 1fr;
+
+        img {
+            grid-column: 1;
+            grid-row: 2;
+            justify-self: center;
+            margin: 0 0 1rem;
+        }
+
+        p {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+}
